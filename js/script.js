@@ -64,7 +64,6 @@ d3.csv("data/us-ag-productivity-2004.csv", function(data) {
            .enter()
            .append("path")
            .attr("d", path)
-           .on("click", function(d) { console.log(d); } )
            .style("fill", function(d) {
                 //Get data value
                 var value = d.properties.value;
@@ -95,6 +94,7 @@ d3.csv("data/us-ag-productivity-2004.csv", function(data) {
                     return Math.sqrt(parseInt(d.population) * 0.00004);
                })
                .style("fill", "grey")
+               .style("stroke", "white")
                .style("opacity", 0.75);
             
         });
